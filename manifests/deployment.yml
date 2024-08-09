@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ssahapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ssahapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: ssahapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: ssahapipelinesjavascriptdocker 
+          image: acrpractice.azurecr.io/ssahapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
